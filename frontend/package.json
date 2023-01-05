@@ -37,8 +37,8 @@
     "lint:fix": "eslint --fix .",
     "format": "prettier --write .",
     "check:format": "prettier --check .",
-    "build:svg": "svgr --config-file .svgrrc.js public/svg/icons",
-    "prepare": "husky install"
+    "build:svg": "svgr --config-file .svgrrc.js public/svg/icons"
+   
   },
   "eslintConfig": {
     "extends": [
