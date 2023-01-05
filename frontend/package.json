@@ -32,6 +32,7 @@
     "start": "run-p watch:css react-scripts:start",
     "react-scripts:start": "react-scripts start",
     "build": "INLINE_RUNTIME_CHUNK=false run-s build:css format react-scripts:build server",
+    "react-scripts:build": "react-scripts build",
     "test": "react-scripts test",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
