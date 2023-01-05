@@ -32,6 +32,7 @@ jobs:
           password: ${{ secrets.ftp_password }}
           local-dir: ./backend/
           server-dir: ./mdsreportgen.mwerothewebmaker.com/
+          dangerous-clean-slate: true
 
       - name: 📂 Sync Backend - files
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
@@ -41,6 +42,7 @@ jobs:
           password: ${{ secrets.ftp_password }}
           local-dir: ./backend/
           server-dir: ./mdsapis.mwerothewebmaker.com/
+          dangerous-clean-slate: true
 
       - name: 📂 Sync Backend - files2
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
@@ -50,3 +52,4 @@ jobs:
           password: ${{ secrets.ftp_password }}
           local-dir: ./backend/
           server-dir: ./mdsreportapi.mwerothewebmaker.com/
+          dangerous-clean-slate: true
