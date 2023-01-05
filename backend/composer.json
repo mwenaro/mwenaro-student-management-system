@@ -1,0 +1,13 @@
+{
+    "name": "mdsreportgen/backend",
+    "authors": [
+        {
+            "name": "Mwero Abdalla",
+            "email": "mwerothewebmaker@gmail.com"
+        }
+    ],
+    "require": {
+        "firebase/php-jwt": "^6.3",
+        "fpdf/fpdf": "^1.85"
+    }
+}
