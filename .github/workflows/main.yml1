@@ -1,0 +1,41 @@
+on:
+  push:
+    branches: main
+
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+
+      - name: pre-build
+        run: |
+          cd ./frontend
+      - name: Use Node.js 18
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18"
+
+      - name: 🔨 pkg installation and build
+        run: |
+          cd ./frontend
+          npm install -f
+          npm run build
+          cd ../
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: ${{ secrets.ftp_server }}
+          username: ${{ secrets.ftp_name }}
+          password: ${{ secrets.ftp_password }}
+          local-dir: ./backend/
+          dangerous-clean-slate: true
+
+      - name: Delete unwanted files
+        run: |
+          rm -rf ./frontend/app
+          rm -rf ./frontend/build
