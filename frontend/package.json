@@ -1,5 +1,6 @@
 {
   "name": "mds_reportgeb_frontend",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -39,7 +40,6 @@
     "format": "prettier --write .",
     "check:format": "prettier --check .",
     "build:svg": "svgr --config-file .svgrrc.js public/svg/icons"
-   
   },
   "eslintConfig": {
     "extends": [
