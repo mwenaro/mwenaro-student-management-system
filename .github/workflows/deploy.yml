@@ -18,12 +18,12 @@ jobs:
 
       - name: 🔨 pkg installation and build
         run: |
+          pwd
           cd ./frontend
           npm install -f
           npm run build
           cd ../
-          
-          
+
       - name: 📂 Sync FrontEnd files
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
@@ -32,8 +32,6 @@ jobs:
           password: ${{ secrets.ftp_password }}
           local-dir: ./frontend/build/
           server-dir: ./mdsreportgen.mwerothewebmaker.com/
-       
-          
 
       - name: 📂 Sync Backend - files
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
@@ -43,9 +41,7 @@ jobs:
           password: ${{ secrets.ftp_password }}
           local-dir: ./backend/
           server-dir: ./mdsapis.mwerothewebmaker.com/
-        
-          
-          
+
       - name: 📂 Sync Backend - files2
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
@@ -54,5 +50,3 @@ jobs:
           password: ${{ secrets.ftp_password }}
           local-dir: ./backend/
           server-dir: ./mdsreportapi.mwerothewebmaker.com/
-  
-          
