@@ -18,7 +18,7 @@ function Signup() {
             <input
               type="text"
               placeholder="username@schoolcode"
-              className="input input-bordered"
+              className="input input-bordered bg-slate-200 text-myprimary"
             />
           </div>
           <div className="form-control">
@@ -26,9 +26,9 @@ function Signup() {
               <span className="label-text text-myprimary">Password</span>
             </label>
             <input
-              type="text"
+              type="password"
               placeholder="password"
-              className="input input-bordered"
+              className="input input-bordered bg-slate-200 text-myprimary"
             />
             <label className="label">
               <Link className="px-1 text-myprimary" to={FORGOT_PASSWORD}>

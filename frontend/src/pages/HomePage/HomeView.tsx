@@ -19,7 +19,7 @@ function HomeView() {
             <input
               type="text"
               placeholder="username@schoolcode"
-              className="input input-bordered"
+              className="input input-bordered bg-slate-200 text-myprimary"
             />
           </div>
           <div className="form-control">
@@ -29,7 +29,7 @@ function HomeView() {
             <input
               type="text"
               placeholder="password"
-              className="input input-bordered"
+              className="input input-bordered      bg-slate-200 text-myprimary"
             />
             <label className="label">
               <Link className="px-1 text-myprimary" to={FORGOT_PASSWORD}>
